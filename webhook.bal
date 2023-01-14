@@ -22,31 +22,31 @@ service asgardeo:RegistrationService on webhookListener {
 service asgardeo:UserOperationService on webhookListener {
   
     remote function onLockUser(asgardeo:GenericEvent event ) returns error? {
-      //Not Implemented
+        log:printInfo(event.toJsonString());
     }
     remote function onUnlockUser(asgardeo:GenericEvent event ) returns error? {
-      //Not Implemented
+        log:printInfo(event.toJsonString());
     }
     remote function onUpdateUserCredentials(asgardeo:GenericEvent event ) returns error? {
-      //Not Implemented
+        log:printInfo(event.toJsonString());
     }
     remote function onDeleteUser(asgardeo:GenericEvent event ) returns error? {
-      //Not Implemented
+        log:printInfo(event.toJsonString());
     }
     remote function onUpdateUserGroup(asgardeo:UserGroupUpdateEvent event ) returns error? {
-      //Not Implemented
+        log:printInfo(event.toJsonString());
     }
 }
 service asgardeo:LoginService on webhookListener {
   
     remote function onLoginSuccess(asgardeo:LoginSuccessEvent event ) returns error? {
-      //Not Implemented
+        log:printInfo(event.toJsonString());
     }
 }
 service asgardeo:NotificationService on webhookListener {
   
     remote function onSmsOtp(asgardeo:SmsOtpNotificationEvent event ) returns error? {
-      //Not Implemented
+        log:printInfo(event.toJsonString());
     }
 }
 
